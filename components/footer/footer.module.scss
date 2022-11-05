@@ -1,0 +1,29 @@
+@use 'styles' as *;
+
+.footer {
+  @include flex(row, center, center);
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid $white-color;
+  color: $white-color;
+  background: $secondary-color;
+}
+
+.wrapper {
+  @include wrapper();
+  @include flex(column, center, center);
+}
+
+.copyrights {
+  display: flex;
+  text-align: center;
+}
+
+.footer a {
+  @include flex(row, center, center);
+  flex-grow: 1;
+}
+
+.logo {
+  @include flex(row, center, center);
+}

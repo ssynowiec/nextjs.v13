@@ -1,0 +1,108 @@
+@use 'styles' as *;
+
+.nav {
+  width: 100%;
+  color: $white-color;
+
+  @include media(md) {
+    width: auto;
+  }
+}
+
+.navList {
+  @include flex(column, center, center);
+  padding: 0;
+  margin: 0;
+
+  @include media(md) {
+    @include flex(row, space-around, center);
+  }
+}
+
+.navLink {
+  @include flex(row, center, center);
+  width: 80%;
+  position: relative;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white-color;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: $secondary-color;
+    transition: height 0.4s ease;
+    transition-delay: 0.3s;
+    z-index: -1;
+  }
+
+  &:hover {
+    //background: $secondary-color;
+
+    &::before {
+      height: 100%;
+    }
+
+    &::after {
+      background: $white-color;
+    }
+  }
+
+  @include media(md) {
+    padding: 1.5rem 4rem;
+    font-size: 1.7rem;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.navLink--active {
+  //color: $tertiary-color;
+  background: $secondary-color;
+}
+
+.navLink--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: $tertiary-color;
+}
+
+.menuHidden {
+  display: none;
+
+  @include media(md) {
+    display: flex;
+  }
+}

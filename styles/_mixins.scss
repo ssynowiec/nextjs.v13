@@ -1,0 +1,32 @@
+@mixin wrapper() {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin media($breakpoint) {
+  $breakpoints: (
+    'xs': '0px',
+    'sm': '576px',
+    'md': '768px',
+    'lg': '992px',
+    'xl': '1200px',
+    'xxl': '1400px',
+  );
+
+  @each $breakpoints, $size in $breakpoints {
+    @if $breakpoint==$breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}

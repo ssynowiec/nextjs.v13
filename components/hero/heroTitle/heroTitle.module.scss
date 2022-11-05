@@ -1,0 +1,7 @@
+@use 'styles' as *;
+
+.heroTitleSection {
+  @include wrapper;
+  position: absolute;
+  color: $primary-color;
+}

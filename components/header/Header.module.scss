@@ -1,0 +1,43 @@
+@use 'styles' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $primary-color;
+  z-index: 100;
+}
+
+.wrapper {
+  @include wrapper();
+  @include flex(column, center, center);
+
+  @include media(md) {
+    @include flex(row, space-between, center);
+  }
+}
+
+.topSection {
+  width: 100%;
+  @include flex(row, space-around, center);
+  @include media(md) {
+    width: auto;
+  }
+}
+
+.logoLink {
+  @include flex(row, center, center);
+  color: $white-color;
+}
+
+.logoImg {
+  width: 4.5rem;
+  height: 4.5rem;
+  padding-right: 1rem;
+
+  @include media(md) {
+    width: 8rem;
+    height: 8rem;
+  }
+}

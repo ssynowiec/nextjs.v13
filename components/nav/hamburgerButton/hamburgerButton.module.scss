@@ -1,0 +1,50 @@
+@use 'styles' as *;
+
+.hamburgerButton {
+  @include flex(column, center, flex-end);
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  @include media(md) {
+    display: none;
+  }
+}
+
+.burgerDash {
+  background: $white-color;
+  border-radius: 10px;
+  height: 1rem;
+  margin: 7px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.topDash {
+  width: 50%;
+}
+
+.middleDash {
+  width: 100%;
+}
+
+.bottomDash {
+  width: 75%;
+}
+
+.active.topDash {
+  transform-origin: bottom;
+  transform: rotatez(-45deg) translate(-11px, 0px);
+}
+
+.active.middleDash {
+  transform-origin: top;
+  transform: rotatez(45deg) translate(-2px, 2px);
+}
+
+.active.bottomDash {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(-29px, -13px) rotatez(-45deg);
+}
