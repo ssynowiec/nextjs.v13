@@ -8,7 +8,7 @@ export const HamburgerButton = () => {
   return (
     <button
       className={clsx(styles.hamburgerButton, isMenuVisible && styles.active)}
-      onClick={toggleMenu}
+      onClick={() => toggleMenu}
       aria-label='Menu'
       role='button'
       aria-controls='navigation'
