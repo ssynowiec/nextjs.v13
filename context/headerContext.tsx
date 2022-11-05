@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 
 type menuState = {
   isMenuVisible: boolean;
-  toggleMenu: (isMenuOpen: boolean) => void;
+  toggleMenu: () => void;
 };
 
 type HeaderProviderProps = { children: ReactNode };
