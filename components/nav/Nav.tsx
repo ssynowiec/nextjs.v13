@@ -30,10 +30,10 @@ export const Nav = () => {
           Blog
         </Link>
         <Link
-          href={'/about-me'}
+          href={'/aboutme'}
           className={clsx(
             styles.navLink,
-            path === '/about-me' && styles['navLink--active'],
+            path === '/aboutme' && styles['navLink--active'],
           )}
         >
           About me
