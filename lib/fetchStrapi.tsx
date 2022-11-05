@@ -1,5 +1,3 @@
-import qs from 'qs';
-
 /**
  * Get full Strapi URL from path
  * @param {string} path Path of the URL
@@ -30,7 +28,7 @@ export const fetchAPI = async (
     ...options,
   };
 
-  const queryString = qs.stringify(urlParamsObject);
+  const queryString = new URLSearchParams(urlParamsObject);
   const requestUrl = `${getStrapiURL(
     `/api${path}${queryString ? `?${queryString}` : ''}`,
   )}`;
