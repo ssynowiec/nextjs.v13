@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 const ContactPage = () => {
   return (
     <>
-      <NextSeo title={'Contact'} />
+      {/*<NextSeo title={'Contact'} />*/}
       <h1>Contact</h1>
     </>
   );
