@@ -9,13 +9,6 @@ export const getStrapiURL = (path = '') => {
   }${path}`;
 };
 
-/**
- * Helper to make GET requests to Strapi API endpoints
- * @param {string} path Path of the API route
- * @param {Object} urlParamsObject URL params object, will be stringified
- * @param {Object} options Options passed to fetch
- * @returns Parsed API call response
- */
 export const fetchAPI = async (
   path: string,
   urlParamsObject = {},
