@@ -1,4 +1,3 @@
-'use client';
 import styles from './footer.module.scss';
 import Image from 'next/image';
 import logo from '../../public/logo/logo.svg';

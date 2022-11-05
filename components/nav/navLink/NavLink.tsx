@@ -1,25 +1,27 @@
 import styles from './navLink.module.scss';
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { usePathname } from 'next/navigation';
 
 type NavLinkProps = {
   href: string;
-  label: string;
+  children: ReactNode;
 };
 
-export const NavLink = ({ href, label }: NavLinkProps) => {
+export const NavLink = ({ href, children }: NavLinkProps) => {
   const path = usePathname();
 
   return (
-    <Link
-      href={href}
+    <li
       className={clsx(
-        styles.navLink,
-        path === href && styles['navLink--active'],
+        styles.navItem,
+        path === href && styles['navItem--active'],
       )}
     >
-      {label}
-    </Link>
+      <Link href={href} className={styles.navLink}>
+        {children}
+      </Link>
+    </li>
   );
 };

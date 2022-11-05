@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './nav.module.scss';
 import { useHeaderContext } from '../../context/headerContext';
 import { clsx } from 'clsx';
@@ -8,15 +10,13 @@ export const Nav = () => {
 
   return (
     <nav className={styles.nav} id='navigation'>
-      <div
-        className={clsx(styles.navList, !isMenuVisible && styles.menuHidden)}
-      >
-        <NavLink href='/' label='Home' />
-        <NavLink href='/blog' label='Blog' />
-        <NavLink href='/aboutme' label='About me' />
-        <NavLink href='/bbb' label='Page' />
-        <NavLink href='/contact' label='Kontakt' />
-      </div>
+      <ul className={clsx(styles.navList, !isMenuVisible && styles.menuHidden)}>
+        <NavLink href='/' children='Home' />
+        <NavLink href='/blog' children='Blog' />
+        <NavLink href='/aboutme' children='About me' />
+        <NavLink href='/bbb' children='Page' />
+        <NavLink href='/contact' children='Contact' />
+      </ul>
     </nav>
   );
 };

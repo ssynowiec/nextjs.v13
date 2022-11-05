@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './hamburgerButton.module.scss';
 import { useHeaderContext } from '../../../context/headerContext';
 import { clsx } from 'clsx';

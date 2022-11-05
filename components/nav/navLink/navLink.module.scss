@@ -1,10 +1,9 @@
 @use 'styles' as *;
 
-.navLink {
+.navItem {
   @include flex(row, center, center);
   width: 80%;
   position: relative;
-  padding: 1.5rem 0;
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -16,6 +15,10 @@
 
   &:last-child {
     margin-bottom: 1rem;
+
+    @include media(md) {
+      margin-bottom: 0;
+    }
   }
 
   &::after {
@@ -43,8 +46,6 @@
   }
 
   &:hover {
-    //background: $secondary-color;
-
     &::before {
       height: 100%;
     }
@@ -53,24 +54,14 @@
       background: $white-color;
     }
   }
-
-  @include media(md) {
-    padding: 1.5rem 4rem;
-    font-size: 1.7rem;
-    white-space: nowrap;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
 }
 
-.navLink--active {
+.navItem--active {
   //color: $tertiary-color;
   background: $secondary-color;
 }
 
-.navLink--active::after {
+.navItem--active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -78,4 +69,18 @@
   width: 100%;
   height: 0.3rem;
   background: $tertiary-color;
+}
+
+.navLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+
+  @include media(md) {
+    padding: 1.5rem 4rem;
+    font-size: 1.7rem;
+    white-space: nowrap;
+  }
 }
