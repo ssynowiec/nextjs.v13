@@ -12,11 +12,14 @@ type HeroImgProps = {
 export const HeroImg = () => {
   return (
     <>
-      <Image className={styles.heroImg} src={heroImage} alt={'Hero Image'} />
-      <div className={styles.heroImgShadow}></div>
-      <Link className={styles.scrollDown} href={'/#about'}>
-        <Image src={scrollDown} alt={''} />
-      </Link>
+      <div className={styles.heroImgSection}>
+        <Image className={styles.heroImg} src={heroImage} alt={'Hero Image'} />
+        <div className={styles.heroImgShadow}></div>
+        {/*<Link className={styles.scrollDown} href={'/#about'}>*/}
+        {/*  <Image src={scrollDown} alt={''} />*/}
+        {/*  <span className='visually-hidden'>Scroll to about me</span>*/}
+        {/*</Link>*/}
+      </div>
     </>
   );
 };

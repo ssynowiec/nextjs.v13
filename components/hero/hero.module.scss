@@ -2,7 +2,6 @@
 
 .hero {
   @include flex(row);
-  position: relative;
   width: 100%;
   height: 100vh;
 }
