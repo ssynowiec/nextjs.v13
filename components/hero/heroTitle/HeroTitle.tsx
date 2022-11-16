@@ -1,4 +1,5 @@
 import styles from './heroTitle.module.scss';
+import { Button } from '../../button/Button';
 
 export const HeroTitle = () => {
   return (
@@ -8,6 +9,7 @@ export const HeroTitle = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
         nisi elit, fermentum at iaculis at, commodo a ligula.
       </p>
+      <Button>Click me!</Button>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 @use 'styles' as *;
 
 .heroTitleSection {
-  @include wrapper;
+  @include wrapper();
   @include flex(column, center, flex-start);
   position: absolute;
   width: 100%;
