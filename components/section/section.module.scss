@@ -1,0 +1,14 @@
+@use 'styles' as *;
+
+.section {
+  width: 100%;
+}
+
+.dark {
+  background-color: $secondary-color;
+  color: $white-color;
+}
+
+.container {
+  @include wrapper();
+}

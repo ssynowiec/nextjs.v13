@@ -19,6 +19,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         {/*<title>KUKUN</title>*/}
         {/*<link rel='shortcut icon' href='/logo/logo.svg' type='image/x-icon' />*/}
         <NextSeo useAppDir={true} {...SEO} title='Home' />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,1,0'
+        />
       </head>
 
       <body>

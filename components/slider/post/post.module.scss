@@ -1,0 +1,42 @@
+@use 'styles' as *;
+
+.post {
+  display: block;
+  background-color: lightgrey;
+}
+
+.post:hover .thumbnail {
+  transform: scale(1.2);
+}
+
+.thumbnailContainer {
+  width: 450px;
+  height: 250px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 450px;
+  height: 250px;
+  max-width: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.postTitle {
+  padding: 0 3rem;
+}
+
+.postDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.postDetail {
+  display: flex;
+  align-items: center;
+  //justify-content: space-around;
+  text-align: center;
+}

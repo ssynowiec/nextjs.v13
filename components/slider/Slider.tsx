@@ -2,28 +2,77 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar } from 'swiper';
-import type { ReactNode } from 'react';
 
 import styles from './slider.module.scss';
 import 'swiper/scss';
 import 'swiper/scss/scrollbar';
+import { Post } from './post/Post';
+import type { PostProps } from './post/Post';
+import { Button } from '../button/Button';
 
-type SliderProps = {
-  children: ReactNode;
-};
-
-const PostsData: Post[] = [
-  { thumb: 'https://picsum.photos/300/200?random=1' },
-  { thumb: 'https://picsum.photos/300/200?random=2' },
-  { thumb: 'https://picsum.photos/300/200?random=3' },
-  { thumb: 'https://picsum.photos/300/200?random=4' },
-  { thumb: 'https://picsum.photos/300/200?random=5' },
-  { thumb: 'https://picsum.photos/300/200?random=6' },
-  { thumb: 'https://picsum.photos/300/200?random=7' },
-  { thumb: 'https://picsum.photos/300/200?random=8' },
+const PostsData: PostProps[] = [
+  {
+    id: 1,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=1',
+    category: ['news', 'hello World'],
+    date: 'listopad 17, 2022',
+  },
+  {
+    id: 2,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=2',
+    date: 'listopad 17, 2022',
+  },
+  {
+    id: 3,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=3',
+    category: ['news'],
+    date: 'listopad 17, 2022',
+  },
+  {
+    id: 4,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=4',
+    category: ['news', 'hello World'],
+    date: 'listopad 17, 2022',
+  },
+  {
+    id: 5,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=5',
+    category: ['news', 'hello World'],
+  },
+  {
+    id: 6,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=6',
+    category: ['news', 'hello World'],
+  },
+  {
+    id: 7,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=7',
+    category: ['news', 'hello World'],
+  },
+  {
+    id: 8,
+    title: 'Hello World!',
+    link: 'https:',
+    thumb: 'https://picsum.photos/450/250?random=8',
+    category: ['news', 'hello World'],
+  },
 ];
 
-export const Slider = ({ children }: SliderProps) => {
+export const Slider = () => {
   return (
     <div className={styles.slider}>
       <Swiper
@@ -43,35 +92,28 @@ export const Slider = ({ children }: SliderProps) => {
             spaceBetween: 30,
           },
           992: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
           1200: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
           1400: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3.5,
+            spaceBetween: 30,
           },
         }}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={swiper => console.log(swiper)}
         className='mySwiper'
       >
-        {PostsData.map((post: Post) => (
-          <SwiperSlide className={styles.post}>
-            <img src={post.thumb} alt='post' />
+        {PostsData.map((post: PostProps) => (
+          <SwiperSlide className={styles.post} key={post.id}>
+            <Post key={post.id} {...post} />
           </SwiperSlide>
         ))}
-        {/*{children}*/}
-        {/*<SwiperSlide>Slide 1</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 2</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 3</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 4</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 4</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 4</SwiperSlide>*/}
-        {/*<SwiperSlide>Slide 4</SwiperSlide>*/}
+        <SwiperSlide className={styles.lastSlide}>
+          <Button>Show more</Button>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
