@@ -36,26 +36,26 @@
   }
 
   &.primary {
-    background-color: $primary-color;
-    color: $white-color;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 
     &:after {
-      background-color: $secondary-color;
+      background-color: var(--secondary-color);
     }
   }
 
   &.secondary {
-    background-color: $secondary-color;
-    color: $white-color;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
 
     &:after {
-      background-color: $secondary-color;
+      background-color: var(--secondary-color);
     }
   }
 
   &.tertiary {
     background-color: #002446;
-    color: $white-color;
+    color: var(--white-color);
 
     &:after {
       background-color: #935d00;
@@ -63,8 +63,8 @@
   }
 
   &.white {
-    background-color: $white-color;
-    color: $primary-color;
+    background-color: var(--white-color);
+    color: var(--primary-color);
 
     &:after {
       background-color: #a0ceff;
@@ -72,8 +72,8 @@
   }
 
   &.dark {
-    background-color: $dark-color;
-    color: $white-color;
+    background-color: var(--dark-color);
+    color: var(--white-color);
 
     &:after {
       background-color: #626262;
@@ -81,8 +81,8 @@
   }
 
   &.reset {
-    background-color: $red-color;
-    color: $white-color;
+    background-color: var(--red-color);
+    color: var(--white-color);
 
     &:after {
       background-color: #ce2231;
@@ -94,28 +94,28 @@
     background-color: transparent !important;
 
     &.primary {
-      border-color: $primary-color;
+      border-color: var(--primary-color);
     }
 
     &.secondary {
-      border-color: $secondary-color;
+      border-color: var(--secondary-color);
     }
 
     &.tertiary {
-      border-color: $tertiary-color;
+      border-color: var(--tertiary-color);
     }
 
     &.white {
-      border-color: $white-color;
+      border-color: var(--white-color);
     }
 
     &.dark {
-      border-color: $dark-color;
+      border-color: var(--dark-color);
     }
 
     &.reset {
-      border-color: $red-color;
-      color: $red-color;
+      border-color: var(--red-color);
+      color: var(--red-color);
     }
   }
 }

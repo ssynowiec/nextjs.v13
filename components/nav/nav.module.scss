@@ -2,7 +2,7 @@
 
 .nav {
   width: 100%;
-  color: $white-color;
+  color: var(--white-color);
 
   @include media(md) {
     width: auto;
@@ -10,13 +10,19 @@
 }
 
 .navList {
-  @include flex(column, center, center);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
 
   @include media(md) {
-    @include flex(row, space-around, center);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -25,5 +31,12 @@
 
   @include media(md) {
     display: flex;
+    flex-direction: row;
   }
+}
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

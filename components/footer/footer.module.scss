@@ -1,17 +1,21 @@
 @use 'styles' as *;
 
 .footer {
-  @include flex(row, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid $white-color;
-  color: $white-color;
-  background: $secondary-color;
+  border-top: 1px solid var(--white-color);
+  color: var(--white-color);
+  background: var(--secondary-color);
 }
 
 .wrapper {
   @include wrapper();
-  @include flex(column, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyrights {
@@ -20,10 +24,14 @@
 }
 
 .footer a {
-  @include flex(row, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
 }
 
 .logo {
-  @include flex(row, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

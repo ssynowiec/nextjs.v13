@@ -13,7 +13,11 @@ export const HeroImg = () => {
   return (
     <>
       <div className={styles.heroImgSection}>
-        <Image className={styles.heroImg} src={heroImage} alt={'Hero Image'} />
+        <Image
+          className={styles.heroImg}
+          src={heroImage}
+          alt={'Man is coding on laptop and listen music in headset'}
+        />
         <div className={styles.heroImgShadow}></div>
         {/*<Link className={styles.scrollDown} href={'/#about'}>*/}
         {/*  <Image src={scrollDown} alt={''} />*/}

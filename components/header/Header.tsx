@@ -7,6 +7,7 @@ import logo from '../../public/logo/logo.svg';
 import styles from './Header.module.scss';
 import { HeaderProvider } from '../../context/headerContext';
 import { HamburgerButton } from '../nav/hamburgerButton/hamburgerButton';
+import { clsx } from 'clsx';
 
 const josefin = Josefin_Slab({ weight: '700' });
 
@@ -22,9 +23,9 @@ export const Header = memo(() => {
                 src={logo}
                 width={70}
                 height={70}
-                alt='Company logo'
+                alt=''
               />
-              <h2 className={josefin.className}>KUKUN</h2>
+              <p className={clsx(josefin.className, styles.logoText)}>KUKUN</p>
             </Link>
             <HamburgerButton />
           </div>

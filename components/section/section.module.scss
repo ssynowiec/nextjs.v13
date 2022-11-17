@@ -5,8 +5,8 @@
 }
 
 .dark {
-  background-color: $secondary-color;
-  color: $white-color;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 
 .container {

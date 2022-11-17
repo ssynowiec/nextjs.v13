@@ -5,30 +5,40 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: $primary-color;
+  background: var(--primary-color);
   z-index: 100;
 }
 
 .wrapper {
   @include wrapper();
-  @include flex(column, center, center);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include media(md) {
-    @include flex(row, space-between, center);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .topSection {
   width: 100%;
-  @include flex(row, space-around, center);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   @include media(md) {
     width: auto;
   }
 }
 
 .logoLink {
-  @include flex(row, center, center);
-  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
 }
 
 .logoImg {
@@ -39,5 +49,13 @@
   @include media(md) {
     width: 8rem;
     height: 8rem;
+  }
+}
+
+.logoText {
+  font-size: 2.2rem;
+
+  @include media(md) {
+    font-size: 2.7rem;
   }
 }

@@ -1,5 +1,14 @@
 @use 'styles' as *;
 
+:root {
+  --white-color: #f7fff7;
+  --primary-color: #0080ff;
+  --secondary-color: #004080;
+  --tertiary-color: #ffa000;
+  --dark-color: #191716;
+  --red-color: #ff495c;
+}
+
 * {
   box-sizing: border-box;
 }

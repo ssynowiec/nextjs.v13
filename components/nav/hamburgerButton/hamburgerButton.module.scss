@@ -1,7 +1,10 @@
 @use 'styles' as *;
 
 .hamburgerButton {
-  @include flex(column, center, flex-end);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   width: 5rem;
   height: 5rem;
   cursor: pointer;
@@ -14,7 +17,7 @@
 }
 
 .burgerDash {
-  background: $white-color;
+  background: var(--white-color);
   border-radius: 10px;
   height: 1rem;
   margin: 7px 0;
