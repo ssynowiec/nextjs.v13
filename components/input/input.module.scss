@@ -1,0 +1,44 @@
+.text,
+.email,
+.password {
+  display: block;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  color: var(--dark-color);
+  //width: 100%;
+  font-size: 2rem;
+  font-weight: inherit;
+  //line-height: var(--inputLineHeight);
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow 0.3s;
+}
+
+.text:focus,
+.email:focus,
+.password:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--primary-color);
+}
+
+.input:has(.checkbox),
+.input:has(.radio) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.input:has(.checkbox) .label,
+.input:has(.radio) .label {
+  cursor: pointer;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

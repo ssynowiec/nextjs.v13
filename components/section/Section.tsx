@@ -1,3 +1,5 @@
+'use client';
+
 import { SectionTitle } from './sectionTitle/SectionTitle';
 import type { ReactNode } from 'react';
 import type { SectionTitleProps } from './sectionTitle/SectionTitle';
