@@ -1,5 +1,17 @@
 .newsletter {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //width: 100%;
+  //max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

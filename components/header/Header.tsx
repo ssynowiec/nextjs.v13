@@ -6,7 +6,7 @@ import { Josefin_Slab } from '@next/font/google';
 import logo from '../../public/logo/logo.svg';
 import styles from './Header.module.scss';
 import { HeaderProvider } from '../../context/headerContext';
-import { HamburgerButton } from '../nav/hamburgerButton/hamburgerButton';
+import { HamburgerButton } from '../nav/hamburgerButton/HamburgerButton';
 import { clsx } from 'clsx';
 
 const josefin = Josefin_Slab({ weight: '700' });

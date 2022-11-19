@@ -1,7 +1,7 @@
 import { Hero } from '../components/hero/Hero';
 import { Slider } from '../components/slider/Slider';
 import { Section } from '../components/section/Section';
-import { Newsletter } from '../components/newsletter/newsletter';
+import { Newsletter } from '../components/newsletter/Newsletter';
 
 const Page = () => {
   return (
@@ -10,7 +10,11 @@ const Page = () => {
       <Section title='FROM THE BLOG' subtitle='CHECK OUR LATEST NEWS'>
         <Slider />
       </Section>
-      <Section title='Newsletter' style='dark'>
+      <Section
+        title='Stay in touch'
+        subtitle='Sign up to our newsletter'
+        style='dark'
+      >
         <Newsletter />
       </Section>
     </>
