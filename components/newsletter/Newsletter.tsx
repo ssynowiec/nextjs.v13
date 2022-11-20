@@ -7,7 +7,7 @@ export const Newsletter = () => {
   return (
     <form className={styles.newsletter}>
       <div className={styles.form}>
-        <Input type='text' />
+        <Input type='text' required={true} />
         <Button type='submit' className={styles.subscribe}>
           Subscribe
         </Button>
@@ -15,6 +15,7 @@ export const Newsletter = () => {
       <div className={styles.info}>
         <Input
           type='checkbox'
+          required={true}
           label='I agree to receive the newsletter'
           id='agreement'
         />

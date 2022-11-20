@@ -3,6 +3,7 @@ import type { HTMLInputTypeAttribute, ChangeEvent } from 'react';
 
 type InputProps = {
   type: HTMLInputTypeAttribute;
+  required?: boolean;
   disabled?: boolean;
   name?: string;
   id?: string;
@@ -15,6 +16,7 @@ type InputProps = {
 
 export const Input = ({
   type = 'text',
+  required = false,
   disabled = false,
   name,
   id,
@@ -32,6 +34,7 @@ export const Input = ({
       <input
         id={id}
         type={type}
+        required={required}
         name={name}
         value={value}
         disabled={disabled}
