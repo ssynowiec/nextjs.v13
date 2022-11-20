@@ -1,11 +1,13 @@
 @use 'styles' as *;
 
 .sectionTitle {
+  padding: 4rem 0 1rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .sectionSubtitle {
+  padding: 0 0 3rem;
   text-align: center;
   text-transform: uppercase;
 }
