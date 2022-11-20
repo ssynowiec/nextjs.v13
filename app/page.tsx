@@ -17,6 +17,9 @@ const Page = () => {
       >
         <Newsletter />
       </Section>
+      <Section title='They will take care of your project' subtitle='Our Team'>
+        ...
+      </Section>
     </>
   );
 };
