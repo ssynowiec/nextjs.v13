@@ -8,9 +8,11 @@ export const Newsletter = () => {
     <form className={styles.newsletter}>
       <div className={styles.form}>
         <Input type='text' />
-        <Button type='submit'>Subscribe</Button>
+        <Button type='submit' className={styles.subscribe}>
+          Subscribe
+        </Button>
       </div>
-      <div>
+      <div className={styles.info}>
         <Input
           type='checkbox'
           label='I agree to receive the newsletter'

@@ -8,6 +8,7 @@ import styles from './button.module.scss';
 
 type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
+  className?: string;
   disabled?: boolean;
   name?: string;
   style?: 'contained' | 'outlined';
@@ -18,6 +19,7 @@ type ButtonProps = {
 
 export const Button = ({
   type = 'button',
+  className,
   disabled = false,
   name,
   style = 'contained',
@@ -29,6 +31,7 @@ export const Button = ({
     <button
       className={clsx(
         comfortaa.className,
+        className,
         styles.button,
         disabled && styles.disabled,
         type === 'reset' && styles.reset,

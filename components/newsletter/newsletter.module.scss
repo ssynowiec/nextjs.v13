@@ -1,3 +1,5 @@
+@use 'styles' as *;
+
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -6,12 +8,28 @@
 }
 
 .form {
+  max-width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  //width: 100%;
-  //max-width: 50rem;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include media(md) {
+    flex-direction: row;
+  }
+}
+
+.subscribe {
+  margin-top: 3rem;
+
+  @include media(md) {
+    margin-top: 0;
+    margin-left: 3rem;
+  }
+}
+
+.info {
+  margin: 3rem 0;
 }
