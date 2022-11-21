@@ -2,6 +2,7 @@ import { Hero } from '../components/hero/Hero';
 import { Slider } from '../components/slider/Slider';
 import { Section } from '../components/section/Section';
 import { Newsletter } from '../components/newsletter/Newsletter';
+import { Team } from '../components/team/Team';
 
 const Page = () => {
   return (
@@ -18,7 +19,7 @@ const Page = () => {
         <Newsletter />
       </Section>
       <Section title='They will take care of your project' subtitle='Our Team'>
-        ...
+        <Team />
       </Section>
     </>
   );

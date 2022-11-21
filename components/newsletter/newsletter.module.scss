@@ -18,10 +18,12 @@
 
   @include media(md) {
     flex-direction: row;
+    align-items: flex-end;
   }
 }
 
 .subscribe {
+  width: 100%;
   margin-top: 3rem;
 
   @include media(md) {

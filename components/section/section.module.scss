@@ -2,11 +2,16 @@
 
 .section {
   width: 100%;
+  padding: 4rem 0;
+  --section-color: #fff;
+  --text-color: var(--dark-color);
 }
 
 .dark {
-  background-color: var(--secondary-color);
-  color: var(--white-color);
+  --section-color: var(--secondary-color);
+  --text-color: var(--white-color);
+  background-color: var(--section-color);
+  color: var(--text-color);
 }
 
 .container {
